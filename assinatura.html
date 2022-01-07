@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/assinatura.css">
+    <title>Assinatura</title>
+</head>
+<body>
+    <div id="content">
+
+        <h1><em style="text-transform:none; font-weight:700; font-size:1.3em; letter-spacing:-.025em;">
+            Assinatura</em>
+        </h1>
+      
+        <p style="text-align:center;">Use o cursor do mouse ou a ponta do dedo para assinar abaixo</p>
+        <form method="post" class="noprint" id="signature-form">
+          <div id="signature"></div>
+          <div>
+            <p style="text-align:center; margin-top:0em">
+              <button id="reset" type="button">Limpar</button>
+              <button id="salvarAssinatura">Salvar</button>
+            </p>
+            <textarea id="signature_capture" name="contractdata"></textarea>
+            
+            
+          </div>
+        </form>
+      
+      </div>
+    
+       <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script src="./js/jSignature.min.js"></script>
+       <script src="./js/funcoes.js"></script>
+       <script src="./js/assinatura.js"></script>
+</body>
+</html>

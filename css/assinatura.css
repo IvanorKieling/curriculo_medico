@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Arapey:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+
+body { 
+    font-family: 'Libre Baskerville', serif; 
+    font-size:16px;
+    line-height:1.5em;
+    color:#000;
+    margin:0;
+    background: rgb(220, 241, 216);
+}
+@media (max-width:600px) {
+  body { font-size:14px; }
+}
+@media (max-width:400px) {
+  #signature {
+    min-width:auto !important;
+    min-height: auto !important;
+  }
+}
+
+strong {
+  font-weight:700;
+}
+
+h1 {
+    text-align:center;
+    font-size:2em; 
+    line-height:1.5em;
+    line-height: 1.2em;
+    letter-spacing:0.15em;
+    font-family:'Arapey', serif;
+    text-transform:uppercase;
+    font-weight:normal;
+    margin-top:1em;
+    position:relative;
+}
+
+#signature {
+  width:auto;
+  box-shadow: 0 0 5px 1px #ddd inset;
+  border: dashed 1px #53777A;
+  margin:0;
+  text-align:center;
+  min-height:100px;
+  min-width:350px;
+  transition:.2s;
+  background-color: rgb(240, 257, 236);
+}
+#signature:hover{
+  box-shadow: 3px 3px 9px #53777A;
+}
+
+
+button { 
+  margin:2em auto; 
+  width: 10em;
+  height: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #53777A;
+  font-size: 1em;
+}
+button:hover{
+  box-shadow: 3px 3px 9px #53777A;
+  font-weight: bold;
+}
+#reset{
+  background: rgb(231, 221, 207);
+}
+#salvarAssinatura{
+  background: rgb(186, 231, 216);
+}
+
+#signature_capture {
+  display: none;
+}
+

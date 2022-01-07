@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Curriculo</title>
+  </head>
+  <body>
+    <header class="text-center text-light">
+        <h1 class="pt-2">Curriculum vitæ</h1>
+    </header>
+    <main>
+        <div class="container-sm-fluid container-md">
+            <div class="row justify-content-center mt-md-4">
+                <div class="containerForm  p-md-5 m-md-3 text-dark  col-md-8 shadow">
+                    <!-- DADOS PESSOAIS -->
+                    <div class="dadosPessoais py-3 py-md-0">
+                        <h4 class="text-info">DADOS PESSOAIS</h4>
+                        <form class="formDadosPessoais font-weight-bold">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="nomeCompleto">Nome completo <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control shadow letras" id="nomeCompleto" placeholder="Ex.: João da Silva" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="profissao">Especialidade</label>
+                                    <input type="text" class="form-control shadow letras" id="profissao" placeholder="Ex.: Cirurgião Plástico">
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="form-group col-4">
+                                    <label for="crm">CRM <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control shadow numeros" id="crm" placeholder="Ex.: 12345" required>
+                                </div>
+                                <div class="form-group col-3">
+                                    <label for="uf">UF <span class="text-danger">*</span></label>
+                                    
+                                    <select id="uf" class="form-control " required>
+                                        <option value=""></option>
+                                        <option value="AC">AC - Acre</option>
+                                        <option value="AL">AL - Alagoas</option>
+                                        <option value="AP">AP - Amapá</option>
+                                        <option value="AM">AM - Amazonas</option>
+                                        <option value="BA">BA - Bahia</option>
+                                        <option value="CE">CE - Ceará</option>
+                                        <option value="DF">DF - Distrito Federal</option>
+                                        <option value="ES">ES - Espirito Santo</option>
+                                        <option value="GO">GO - Goiás</option>
+                                        <option value="MA">MA - Maranhão</option>
+                                        <option value="MS">MS - Mato Grosso do Sul</option>
+                                        <option value="MT">MT - Mato Grosso</option>
+                                        <option value="MG">MG - Minas Gerais</option>
+                                        <option value="PA">PA - Pará</option>
+                                        <option value="PB">PB - Paraíba</option>
+                                        <option value="PR">PR - Paraná</option>
+                                        <option value="PE">PE - Pernambuco</option>
+                                        <option value="PI">PI - Piauí</option>
+                                        <option value="RJ">RJ - Rio de Janeiro</option>
+                                        <option value="RN">RN - Rio Grande do Norte</option>
+                                        <option value="RS">RS - Rio Grande do Sul</option>
+                                        <option value="RO">RO - Rondônia</option>
+                                        <option value="RR">RR - Roraima</option>
+                                        <option value="SC">SC - Santa Catarina</option>
+                                        <option value="SP">SP - São Paulo</option>
+                                        <option value="SE">SE - Sergipe</option>
+                                        <option value="TO">TO - Tocantins</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="crq">RQE</label>
+                                    <input type="text" class="form-control shadow numeros" id="crq" placeholder="Ex.: 12345">
+                                </div>   
+                                
+                            </div>
+                            <button type="button" class="btn btn-secondary col mt-2 mx-0" id="btnAssinatura">Registrar Rubrica</button>
+                            
+                            <!-- <button type="button" class="btn btn-info col my-3" id="btnVizualizar">Vizualizar Rubrica</button>
+                            <button type="button" class="btn btn-info col my-2" id="btnEsconder">Esconder Rubrica</button> -->
+
+                            <div id="divImg" class="ml-0 text-center ">
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control shadow" id="email" placeholder="Ex.: joao@gmail.com" required>
+                            </div>
+                            <div class="form-group mt-md-3">
+                                <div class="row d-flex justify-content-between">
+                                    <label for="objetivo" class="col-1">Objetivo</label>
+                                    <div class="float-right col-1 mr-3 mr-lg-0"><small id="count1">500</small></div>
+                                </div>                               
+                                <textarea class="text" id="objetivo" placeholder="Fale um pouco sobre você e o que almejas." maxlength="500"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn col-6 shadow btn-success float-right">Próximo</button>
+                        </form>
+                    </div>
+                    <!-- FORMAÇÃO ACADÊMICA -->
+                    <div class="formacaoAcademica py-3 py-md-0 display">
+                        <h4 class="text-info">FORMAÇÃO ACADÊMICA</h4>
+                        <form class="formFormacaoAcademica font-weight-bold">
+                            <div id="containerFormacao">
+                                <div class="form-group">
+                                    <label for="curso">Curso</label>
+                                    <input type="text" class="form-control shadow letras" id="curso0" placeholder="EX.: Bacharel em Medicina">
+                                </div>
+                                <div class="form-group">
+                                    <label for="faculdade">Instituição</label>
+                                    <input type="text" class="form-control shadow letras" id="faculdade0" placeholder="Ex.: Pontifícia Universidade Católica do Rio Grande do Sul(PUCRS)">
+                                </div>
+                                <label for="anoIng">Período</label>
+                                <div class="row justify-content-between m-0 p-0 col-md-6">
+                                    <div class="form-group col-5 col-md pl-0">                                    
+                                        <input type="number" min="1960" max="2021" step="1" class="form-control shadow numeros" id="anoIng0" placeholder="Ex.: 2013">
+                                    </div>
+                                    <div class="mt-2"><label class="col-md-0">até</label></div>
+                                    <div class="form-group col-5 col-md pr-0">
+                                        <input type="number" min="1960" max="2021" step="1" class="form-control shadow numeros" id="anoConc0" placeholder="Ex.: 2018">
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            
+                            <button type="button" id="addCurso" class="btn shadow btn-info mt-2 col-md-6">Adicionar outro curso</button><br>
+                            <div class="form-group mt-3">
+                                <div class="row d-flex justify-content-between">
+                                    <label for="outrosCursos" class="ml-3">Cursos Complementares</label>
+                                    <div class="float-right col-1 mr-3 mr-lg-0"><small id="count2">500</small></div>                                
+                                </div>
+                                <textarea id="complemento" maxlength="500"></textarea>
+                            </div>
+                            <div class="form-group row justify-content-between m-0">
+                                <button type="button" id="voltaDadosPessoais" class="btn shadow col mr-1 col-md-3 voltar">Voltar</button>
+                                <button type="submit" class="btn shadow btn-success col col-md-3 ml-1">Próximo</button>
+                            </div>
+
+                            
+                        </form>
+                    </div>
+                    <!-- Experiências Profissionais -->
+                    <div class="experienciasProfissionais display py-3 py-md-0">
+                        <h4 class="text-info">Experiências Profissionais</h4>
+                        <form class="formExperienciasProfissionais font-weight-bold">
+                            <div id="containerExperiencias">
+                                <div class="form-group">
+                                    <label for="empresa0">Empresa</label>
+                                    <input type="text" class="form-control shadow letras" id="empresa0" placeholder="EX.: Hospital São Francisco">
+                                </div>
+                                <div class="form-group p-0">
+                                    <label for="cargo0">Cargo</label>
+                                    <input type="text" class="form-control shadow letras" id="cargo0" placeholder="EX.: Médico clínico geral">
+                                </div>
+                                <label for="anoAdm0">Período</label>
+                                <div class="row justify-content-between m-0 p-0 col-md-6">    
+                                    <div class="form-group col-5 col-md pl-0">
+                                        <input type="number" min="1960" max="2021" step="1" class="form-control shadow numeros" id="anoAdm0" placeholder="Ex.: 2013">
+                                    </div>
+                                    <div class="mt-2"><label class="col-md-0">até</label></div>
+                                    <div class="form-group col-5 col-md pr-0">
+                                        <input type="number" min="1960" max="2021" step="1" class="form-control shadow numeros" id="anoDem0" placeholder="Ex.: 2018">
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <button type="button" id="addEmpresa" class="btn shadow btn-info mt-2 mb-5 col-md-6">Adicionar outra empresa</button><br>
+
+                            <div class="form-group row justify-content-between m-0">
+                                <button type="button" id="voltaFormacaoAcademica" class="btn shadow mr-1 col col-md-3 voltar">Voltar</button>
+                                <button type="submit" class="btn shadow ml-1 btn-success col col-md-3">Próximo</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Atividades Complementares -->
+                    <div class="atividadesComplementares display py-3 py-md-0">
+                        <h4 class="text-info">Atividades Complementares</h4>
+                        <form class="formAtividadesComplementares font-weight-bold">
+                            <label for="empresa">Habilidade</label>
+                            <div class="row" id="rowHabilidades">                                
+                                <div class="form-group col-md-7 col-lg-9">                                    
+                                    <input type="text" class="form-control shadow" id="habilidade0">
+                                </div>
+                                <label class="col-12 mb-0 d-md-none">Nível de domínio</label>
+                                <div class="rating  mt-0 ml-3 ml-md-0"> 
+                                    <input type="radio" name="0rating" value="5" id="0star5">
+                                    <label for="0star5">☆</label>
+                                    <input type="radio" name="0rating" value="4" id="0star4">
+                                    <label for="0star4">☆</label>
+                                    <input type="radio" name="0rating" value="3" id="0star3">
+                                    <label for="0star3">☆</label>
+                                    <input type="radio" name="0rating" value="2" id="0star2">
+                                    <label for="0star2">☆</label>
+                                    <input type="radio" name="0rating" value="1" id="0star1">
+                                    <label for="0star1">☆</label>
+                                </div>
+                             </div>
+                            <button type="button" id="addSkill" class="btn shadow btn-info mt-2 col-lg-6">Adicionar outra habilidade</button><br>
+                            <div class="form-group mt-3">
+                                <div class="row d-flex justify-content-between">
+                                    <label for="outrosCursos" class="ml-3">Atividades Complementares</label>
+                                    <div class="float-right col-1 mr-4 mr-md-3 mr-lg-0"><small id="count3">500</small></div>
+                                </div>                             
+                                <textarea name="" id="atividades" maxlength="500"></textarea>
+                            </div>
+                            
+                            <div class="form-group row justify-content-between m-0">
+                                <button type="button" id="voltaExperienciasProfissionais" class="btn shadow mr-1 col col-md-3 voltar">Voltar</button>
+                                <button type="submit" class="btn shadow btn-success ml-1 col col-md-6">Gerar Curriculo</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="./js/html2canvas.js"></script>
+    <script src="./js/funcoes.js"></script>
+    <script src="./js/cadastro.js"></script>
+</html>

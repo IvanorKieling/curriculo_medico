@@ -1,0 +1,113 @@
+
+body{
+    background-image: linear-gradient(rgb(210, 240, 210), rgb(20,50,20)) !important;
+    height: 100vh;
+    background-size: 100%;
+}
+header{
+    height: 10vh;
+
+    background-image: linear-gradient(to right, rgb(154, 180, 154), rgb(78, 88, 78), rgb(154, 180, 154))
+}
+input{
+    background-color: rgb(236, 253, 232) !important;
+}
+option{      
+    background: rgb(236, 253, 232) !important; 
+}
+select option:hover{
+    background-color: rgb(209, 224, 205) !important;
+}
+select{      
+    background: rgb(236, 253, 232) !important; 
+}
+select:hover{
+    background-color: rgb(209, 224, 205) !important;
+}
+
+.containerForm{
+    background-color: rgb(220, 241, 216) !important;
+}
+::placeholder {
+    color: rgb(202, 186, 188) !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgb(202, 186, 188) !important;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgb(202, 186, 188) !important;
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(202, 186, 188) !important;
+  }
+#divImg{
+    line-height: 0.1em;
+}
+
+textarea{
+    width: 100%;
+    background-color: rgb(236, 253, 232) !important;
+}
+.display{
+    display: none;
+}
+label{
+    color: #565 !important;
+}
+.voltar{
+    background-color: darkgoldenrod !important;
+    color: white !important;
+}
+.voltar:hover{
+    background-color: rgb(155, 115, 13) !important;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+    position: relative;
+    width: 1em;
+    font-size: 2em;
+    color: #FFD600;
+    cursor: pointer
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
+}
+
+#btnAssinatura{
+    display: none;
+}
+
+@media only screen and (min-width: 500px) {
+    header {
+        background-image: linear-gradient(to right, rgb(210, 240, 210), rgb(78, 88, 78), rgb(210, 240, 210)) !important;
+    }
+  }

@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    height: 100vh;
+}
+
+header{
+    background-color: rgb(52, 59, 69);
+    color: white;
+    height: 20vh;
+}
+main{
+    color: rgb(52, 59, 69) impo !important;
+}
+header > h1{
+    padding-left: 1vw;
+    padding-top: 2vh;
+    font-size: clamp(2em, 2em + 1vw, 1.5em);
+}
+
+header > h5{
+    padding-left: 1vw;
+}
+
+aside{
+    background-color: rgb(240, 240, 240);
+}
+
+aside > h5 {
+    line-height: 0;
+    padding-top: 5vh;
+}
+main > div > div > h5{
+    line-height: 0;
+    padding-top: 2vh;
+}
+.xp{
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+img{
+    width: 70% !important;
+}
+
+@media only screen and (min-width: 500px) {
+    header {
+        height: 15vh;
+    }
+    img{
+        width: 35% !important;
+    }
+}
+
